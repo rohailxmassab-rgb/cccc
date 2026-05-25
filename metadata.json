@@ -1,0 +1,6 @@
+{
+  "name": "ALFLIX",
+  "description": "A premium futuristic restaurant mobile app with cinematic animations and Firebase integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
