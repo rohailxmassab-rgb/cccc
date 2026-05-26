@@ -15,7 +15,7 @@ app.post("/api/recommendations", async (req, res) => {
     const apiKey = process.env.GEMINI_API_KEY;
     
     if (!apiKey) {
-      return res.status(500).json({ error: "Gemini API key missing" });
+      return res.status(500).json({ error: "Gemini API key missing. Please set GEMINI_API_KEY in your environment variables." });
     }
 
     const ai = new GoogleGenAI({
@@ -36,7 +36,7 @@ app.post("/api/recommendations", async (req, res) => {
     `;
 
     const response = await ai.models.generateContent({
-      model: "gemini-3.1-flash-lite",
+      model: "gemini-3.5-flash",
       contents: prompt,
       config: {
         responseMimeType: "application/json"
